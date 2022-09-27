@@ -13,10 +13,27 @@ Examples
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
  */
 
+import java.util.Arrays;
+
 public class FindTheOddInt {
 
     public static int findIt(int[] a) {
-        return 0;
-    }
+        int[] b = Arrays.copyOf(a, a.length);
+        Arrays.sort(b);
 
+        int odd=b[0];
+        int count = 0;
+
+        for (int i = 0; i < b.length; i++) {
+            if (b[i] == odd || b.length == 1) {
+                count += 1;
+                continue;
+            } else {
+                if (count % 2 != 0) break;
+                count = 1;
+            }
+            odd=b[i];
+        }
+        return odd;
+    }
 }
