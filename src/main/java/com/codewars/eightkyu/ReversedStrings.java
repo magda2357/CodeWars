@@ -1,4 +1,4 @@
-package com.codewars.sixkyu;
+package com.codewars.eightkyu;
 
 public class ReversedStrings {
     public static String solution(String str) {

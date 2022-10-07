@@ -1,4 +1,4 @@
-package com.codewars.sixkyu;
+package com.codewars.eightkyu;
 /*Write a function to split a string and convert it into an array of words.*/
 
 public class StringToArray {

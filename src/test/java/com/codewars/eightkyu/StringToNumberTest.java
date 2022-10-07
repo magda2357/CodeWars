@@ -1,4 +1,4 @@
-package com.codewars.sixkyu;
+package com.codewars.eightkyu;
 
 import org.junit.Test;
 
