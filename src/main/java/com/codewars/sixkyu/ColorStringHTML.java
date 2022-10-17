@@ -17,4 +17,7 @@ public class ColorStringHTML {
         }
         return result;
     }
+//clever
+    //return String.format("#%06x", r.nextInt(0x1000000));
+
 }
