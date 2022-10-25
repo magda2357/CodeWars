@@ -6,10 +6,11 @@ public class ColorStringHTML {
 
     public static String generateColor(Random r) {
         char i;
+        int ascii_z=122;
         String result = "#";
         int j = 0;
         while (j < 6) {
-            i = (char) r.nextInt(122);
+            i = (char) r.nextInt(ascii_z);
             if ((i >= 'a' && i <= 'f') || (i >= 'A' && i <= 'F') || (i >= '1' && i <= '9')) {
                 result += i;
                 j++;
