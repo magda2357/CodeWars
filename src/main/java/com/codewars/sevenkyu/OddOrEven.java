@@ -3,28 +3,11 @@ package com.codewars.sevenkyu;
 Give your answer as a string matching "odd" or "even".
 If the input array is empty consider it as: [0] (array with a zero).*/
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class OddOrEven {
     public static String oddOrEven(int[] array) {
-        Integer[] newArray = new Integer[array.length];
-        int i = 0;
-        for (int value : array) {
-            newArray[i++] = value;
-        }
-
-        List<Integer> list = new ArrayList<>();
-        Collections.addAll(list, newArray);
-
-        Iterator<Integer> it = list.iterator();
-        int sum = 0;
-        while (it.hasNext()) {
-            sum += it.next();
-        }
-
+        int sum= Arrays.stream(array).sum();
         return ((sum % 2 == 0) ? "even" : "odd");
     }
 }
