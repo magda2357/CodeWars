@@ -9,13 +9,19 @@ a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 returns ["arp", "live", "strong"]*/
 
 import java.util.Arrays;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 public class WhichAreIn {
 
     public static String[] inArray(String[] array1, String[] array2) {
-        SortedSet<String> result = new TreeSet<>();
+        return Arrays.stream(array1)
+                .filter(str -> Arrays.stream(array2).anyMatch(a -> a.contains(str)))
+                .distinct()
+                .sorted()
+                .toArray(String[]::new);
+
+
+
+        /*SortedSet<String> result = new TreeSet<>();
 
         for (String x : array1) {
             for (String y : array2) {
@@ -26,7 +32,7 @@ public class WhichAreIn {
         }
 
         Object[] objArr = result.toArray();
-        return Arrays.copyOf(objArr, objArr.length, String[].class);
+        return Arrays.copyOf(objArr, objArr.length, String[].class);*/
     }
 
 }
